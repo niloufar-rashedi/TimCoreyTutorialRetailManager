@@ -1,0 +1,4 @@
+We are creating a MVVM (MVie independent of model) in .NET Framewrok.
+1- Greate Git Repo and clone it, then pull it in a folder
+2- Create a blank solution in that directory, dont limit it to C#, it can be any language
+3- 
