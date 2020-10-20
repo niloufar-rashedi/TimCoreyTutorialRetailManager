@@ -9,9 +9,11 @@ namespace TRMWPFDesktopUserInterface.ViewModels
 {
     public class ShellViewModel : Conductor<object>
     {
-        public ShellViewModel()
+        private LoginViewModel _loginVM;
+        public ShellViewModel(LoginViewModel loginVM)
         {
-
+            _loginVM = loginVM;
+            ActivateItem(_loginVM);
         }
     }
 }
