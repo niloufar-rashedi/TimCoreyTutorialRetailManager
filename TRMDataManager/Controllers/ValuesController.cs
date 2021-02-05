@@ -14,7 +14,8 @@ namespace TRMDataManager.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            string userId = RequestContext.Principal.Identity.GetUserId();
+            string userId = RequestContext.Principal.Identity.GetUserId();//This user Id is the primary key from SQL table
+            
             return new string[] { "value1", "value2", userId };
         }
 

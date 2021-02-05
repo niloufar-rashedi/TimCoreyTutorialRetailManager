@@ -19,7 +19,8 @@ namespace TRMWPFDesktopUserInterface.Helpers
         }
         private void InitializeClient()
         {
-            string api = ConfigurationManager.AppSettings["api"];
+            string api = ConfigurationManager.AppSettings["api"];//Mind line 38!
+                                        //Above line is related to the App.config, api configuration
             apiClient = new HttpClient();
             apiClient.BaseAddress = new Uri(api);
             apiClient.DefaultRequestHeaders.Accept.Clear();
@@ -35,7 +36,7 @@ namespace TRMWPFDesktopUserInterface.Helpers
                 new KeyValuePair<string, string>("username", username),
                 new KeyValuePair<string, string>("password", password),
             });
-            using (HttpResponseMessage response = await apiClient.PostAsync("/Token", data))
+            using (HttpResponseMessage response = await apiClient.PostAsync("/Token", data))//Part of avoiding to hardcode the URL 
             {
                 if (response.IsSuccessStatusCode)
                 {

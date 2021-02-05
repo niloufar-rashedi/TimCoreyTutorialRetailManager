@@ -25,7 +25,6 @@ namespace TRMWPFDesktopUserInterface.ViewModels
                 _userName = value;
                 NotifyOfPropertyChange(() => UserName);
                 NotifyOfPropertyChange(() => CanLogIn);
-
             }
         }
 
